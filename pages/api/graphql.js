@@ -5,14 +5,16 @@ const typeDefs = gql`
     users: [User!]!
   }
   type User {
-    name: String
+    name: String,
+    email: String,
+    contact: String
   }
 `
 
 const resolvers = {
   Query: {
     users(parent, args, context) {
-      return [{ name: 'Nextjs' }]
+      return [{ name: 'Haider Ali', email: 'haider@gmail.com', contact: '12345678' }, {name: 'Usama Nasir', email: 'haider@gmail.com', contact: '12345678'}]
     },
   },
 }
